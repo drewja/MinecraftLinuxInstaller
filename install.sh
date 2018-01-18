@@ -18,7 +18,7 @@ rm -rf $TmpDIR
 
 (
    printf '#!/bin/sh\n'
-   printf 'LD_PRELOAD=$HOME/usr/lib/libprocname.so PROCNAME=minecraft java -jar $HOME/usr/lib/Minecraft.jar\n'
+   printf 'LD_PRELOAD='$HOME'/usr/lib/libprocname.so PROCNAME=minecraft java -jar '$HOME'/usr/lib/Minecraft.jar\n'
 ) > $HOME/bin/minecraft
 chmod +x $HOME/bin/minecraft
 
